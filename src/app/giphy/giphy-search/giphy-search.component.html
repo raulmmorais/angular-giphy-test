@@ -1,4 +1,9 @@
-Limit: <input type="number">
-Term: <input type="text">
-<input type="button" value="pesquisar">
+<form >
+  Limit: <input type="number" id="limit" name = "limit" [(ngModel)] = "limit" (keyup.enter)="pesquisarGiphy()">
+  Term: <input type="text" id="term" name = "term" [(ngModel)] = "term" (keyup.enter)="pesquisarGiphy()">
+  <input type="button" value="pesquisar" (click)="pesquisarGiphy()" >
+</form>
 <br>
+<div *ngFor="let gif of gifs">
+  <img src="https://i.giphy.com/{{gif.id}}.gif" title="image {{gif.id}}">
+</div>

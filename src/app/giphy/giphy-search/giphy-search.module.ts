@@ -1,12 +1,15 @@
 import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { giphySearchComponent } from './giphy/giphy-search/giphy-search.component';
+import { giphySearchComponent } from './giphy-search.component';
+import { GiphySearchService } from '../giphy-search.service';
 
 @NgModule({
-  imports: [],
+  imports: [ CommonModule, FormsModule ],
   exports: [ giphySearchComponent ],
   declarations: [ giphySearchComponent ],
-  providers: []
+  providers: [ GiphySearchService ]
 })
 
 export class giphySearchComponentModule{};
