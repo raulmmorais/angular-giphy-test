@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { giphySearchComponent } from './giphy-search.component';
 import { GiphySearchService } from '../giphy-search.service';
+import { GiphySearchListComponentModule } from  '../giphy-search-list/giphy-search-list.module';
 
 @NgModule({
-  imports: [ CommonModule, FormsModule ],
+  imports: [ CommonModule, FormsModule, GiphySearchListComponentModule ],
   exports: [ giphySearchComponent ],
   declarations: [ giphySearchComponent ],
   providers: [ GiphySearchService ]

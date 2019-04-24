@@ -22,8 +22,10 @@ export class giphySearchComponent implements OnInit{
     //this.limit = '5';
     //this.term = 'happy';
     this.giphySearchService.searchGiphy(this.limit, this.term).subscribe(
-      (response: Response) => {this.gifs = response.json().data}
+      (response: Response) => {
+        this.gifs = response.json().data;
+        console.log("Request done");
+        }
     );
-    return false;
   }
 }
